@@ -35,7 +35,8 @@ public class FelineLionParameterizedGetKittensTest {
 
     @Test
     public void getKittensCountLionTest() throws Exception{
-        Lion lion = new Lion("Самец");
+        Feline feline = new Feline();
+        Lion lion = new Lion("Самец", feline);
         int actual = lion.getKittens(kittensCount);
         Assert.assertEquals(expected, actual);
     }

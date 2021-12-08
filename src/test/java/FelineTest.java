@@ -16,11 +16,9 @@ public class FelineTest {
 
     @Test
     public void felineFoodTest() throws Exception {
-            Feline feline = new Feline();
-            feline.eatMeat();
-            Mockito.when(animal.getFood("Хищник")).thenReturn(List.of("Животные", "Птицы", "Рыба"));
-            Assert.assertEquals(List.of("Животные", "Птицы", "Рыба"), animal.getFood("Хищник"));
-
+        Feline feline = new Feline();
+        animal.getFood("Хищник");
+        Mockito.verify(animal).getFood("Хищник");
     }
 
     @Test
@@ -35,8 +33,5 @@ public class FelineTest {
         Feline feline = new Feline();
         Assert.assertEquals(1, feline.getKittens());
     }
-
-
-
 
 }

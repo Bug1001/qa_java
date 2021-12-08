@@ -9,29 +9,26 @@ public class AlexTest {
 
     @Test
     public void alexHasManeTest() throws Exception{
-        Feline feline = new Feline();
-        Alex alex = new Alex(feline);
+
+        Alex alex = new Alex();
         Assert.assertEquals(true, alex.doesHaveMane());
     }
 
     @Test
     public void alexGetFriendsTest() throws Exception{
-        Feline feline = new Feline();
-        Alex alex = new Alex(feline);
+        Alex alex = new Alex();
         Assert.assertEquals(List.of("Марти", "Глория", "Мелман"), alex.getFriends());
     }
 
     @Test
     public void alexGetPlaceOfLivingTest() throws Exception{
-        Feline feline = new Feline();
-        Alex alex = new Alex(feline);
+        Alex alex = new Alex();
         Assert.assertEquals("Нью-Йоркский зоопарк", alex.getPlaceOfLiving());
     }
 
     @Test
     public void alexGetKittensTest() throws Exception{
-        Feline feline = new Feline();
-        Alex alex = new Alex(feline);
+        Alex alex = new Alex();
         Assert.assertEquals(0, alex.getKittens());
     }
 }

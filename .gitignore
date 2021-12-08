@@ -23,9 +23,8 @@
 hs_err_pid*
 
 #compiled targets
-target/classes/*
-target/generated*/*
-target/maven*/*
-target/surefire-reports/*
-target/test-classes/*
-target/*.jar
+target/
+!target/site/
+!target/jacoco.exec
+
+.idea/*

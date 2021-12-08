@@ -14,21 +14,16 @@ import java.util.List;
 public class CatTest {
     @Mock
     Feline feline;
-    Predator predator;
 
-    Cat cat = new Cat(feline);
     @Test
     public void getSoundTest(){
-
+        Cat cat = new Cat(feline);
         Assert.assertEquals("Мяу", cat.getSound());
     }
     @Test
-    public void catGetFoodTest() {
-        try {
-            cat.getFood();
-            Mockito.when(predator.eatMeat()).thenReturn(List.of("Животные", "Птицы", "Рыба"));
-            Assert.assertEquals(List.of("Животные", "Птицы", "Рыба"), predator.eatMeat());
-        }
-        catch(Exception e) {}
+    public void catGetFoodTest() throws Exception {
+            Cat cat = new Cat(feline);
+            Mockito.when(feline.eatMeat()).thenReturn(List.of("Животные", "Птицы", "Рыба"));
+            Assert.assertEquals(List.of("Животные", "Птицы", "Рыба"), cat.getFood());
     }
 }
